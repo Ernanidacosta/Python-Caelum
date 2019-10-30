@@ -6,7 +6,7 @@ class Historico:
         self.transacoes = []
 
     def imprime(self):
-        print('Data de abertura: {}'.format(self.data_abertura))
+        print('Data de Abertura: {}'.format(self.data_abertura))
         print('Transações: ')
         for t in self.transacoes:
             print('-', t)
@@ -19,7 +19,7 @@ class Cliente:
 
 class Conta:
     def __init__(self, numero, cliente, saldo, limite=1000.0):
-        print('Inicializando conta')
+        print('Inicializando Conta')
         self.titular = cliente
         self.numero = numero
         self.saldo = saldo
@@ -33,14 +33,14 @@ class Conta:
 
     def deposita(self, valor):
         self.saldo += valor
-        self.historico.transacoes.append("depósito de {}".format(valor))
+        self.historico.transacoes.append("Depósito de {}".format(valor))
 
     def saca(self, valor):
         if (self.saldo < valor):
             return False
         else:
             self.saldo -= valor
-            self.historico.transacoes.append("saque de {}".format(valor))
+            self.historico.transacoes.append("Saque de {}".format(valor))
 
     def transfere_para(self, destino, valor):
         retirou = self.saca(valor)
@@ -49,8 +49,8 @@ class Conta:
         else:
             destino.deposita(valor)
             return True
-            self.historico.transacoes.append("transferencia de {} para {}".format(valor, destino.numero))
+            self.historico.transacoes.append("Transferencia de {} para {}".format(valor, destino.numero))
 
     def extrato(self):
-        print('numero: {} \nsaldo: {}'.format(self.numero, self.saldo))
-        self.historico.transacoes.append("extrato da conta: {}".format(self.numero))
+        print('Numero: {} \nsaldo: {}'.format(self.numero, self.saldo))
+        self.historico.transacoes.append("Extrato da conta: {}".format(self.numero))
