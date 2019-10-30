@@ -1,0 +1,1 @@
+Code generated while learning object-oriented Python with Caelum PY-14 course workbook.
