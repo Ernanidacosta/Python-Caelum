@@ -1,14 +1,8 @@
 #-*- coding: utf-8 -*-
-def deposita(conta, valor):
-	conta['saldo'] += valor
+from conta import *
 
-def saca(conta, valor):
-	conta['saldo'] -= valor
+cliente1 = Cliente('Ernani', ' Costa', 12345679)
+conta1 = Conta('123-4', cliente1, 1000,)
 
-def extrato(conta):
-	print("Numero: {}\n saldo: {}".format([conta'numero'],[conta'saldo']))
-
-
-def cria_conta(numero, titular, saldo, limite):
-	conta = {"numero": numero, "titular": titular, "saldo": saldo,"limite": limite,}
-	return conta
+print(conta1)
+print(cliente1)
