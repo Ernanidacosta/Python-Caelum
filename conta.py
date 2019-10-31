@@ -6,7 +6,7 @@ class Historico:
         self.transacoes = []
 
     def imprime(self):
-        print('Data de Abertura: {}'.format(self.data_abertura))
+        print('Data da Abertura: {}'.format(self.data_abertura))
         print('Transações: ')
         for t in self.transacoes:
             print('-', t)
