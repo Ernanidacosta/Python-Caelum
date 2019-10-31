@@ -19,7 +19,7 @@ class Cliente:
 
 class Conta:
     def __init__(self, numero, cliente, saldo, limite=1000.0):
-        print('Inicializando Conta')
+        print('Conta Inicializada')
         self.titular = cliente
         self.numero = numero
         self.saldo = saldo
